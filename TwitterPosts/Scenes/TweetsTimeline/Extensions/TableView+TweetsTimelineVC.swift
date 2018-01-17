@@ -12,6 +12,7 @@ extension TweetsTimelineViewController: UITableViewDelegate, UITableViewDataSour
     
     func configureTableViewOnLoad() {
         self.tweetsTimelineTableView.register(UINib(nibName: "TimelineTweet", bundle: Bundle.main), forCellReuseIdentifier: cellIdentifiers.timelineTweet)
+        self.tweetsTimelineTableView.rowHeight = UITableViewAutomaticDimension
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -31,7 +32,7 @@ extension TweetsTimelineViewController: UITableViewDelegate, UITableViewDataSour
         let displayedTweet = self.displayTweetsTimeline[indexPath.row]
         
         if let timelineTweetCell = tableView.dequeueReusableCell(withIdentifier: cellIdentifiers.timelineTweet) as? TimelineTweetCell {
-            //Fill cell
+            timelineTweetCell.set(tweet: displayedTweet)
             return timelineTweetCell
         }
         

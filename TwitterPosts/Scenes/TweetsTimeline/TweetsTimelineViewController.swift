@@ -60,6 +60,7 @@ class TweetsTimelineViewController: UIViewController, TweetsTimelineViewControll
     
     func displayTweetsTimeline(viewModel: TweetsTimelineScene.GetTweetsTimeline.ViewModel) {
         self.displayTweetsTimeline += viewModel.displayTweets
+        print(self.displayTweetsTimeline.count)
         self.tweetsTimelineTableView.reloadData()
     }
 }

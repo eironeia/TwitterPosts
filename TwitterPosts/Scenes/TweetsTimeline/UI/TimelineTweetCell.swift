@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class TimelineTweetCell: UITableViewCell {
 
@@ -28,4 +29,21 @@ class TimelineTweetCell: UITableViewCell {
         // Configure the view for the selected state
     }
 
+    func set(tweet: TweetsTimelineScene.GetTweetsTimeline.DisplayTweet) {
+        
+        let pictureURL = URL(string: tweet.user.profileImageURL)
+        print(pictureURL)
+        self.profileImageView.kf.setImage(with: pictureURL)
+        self.profileImageView.layer.cornerRadius = self.profileImageView.frame.height/2
+        self.profileImageView.clipsToBounds = true
+        
+        self.nameLabel.text = tweet.user.name
+        self.screenNameLabel.text = tweet.user.screenName
+        
+        //TODO: MAKE THE FAVOURITE ACTIONS
+        self.favouriteButton.layer.cornerRadius = self.favouriteButton.layer.frame.height/2
+        
+        self.tweetTextLabel.text = tweet.text
+        self.dateLabel.text = tweet.creationDate
+    }
 }

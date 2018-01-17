@@ -28,6 +28,7 @@ class TweetsTimelinePresenter: TweetsTimelinePresenterInput {
             let user = tweet.user
             let displayUser = TweetsTimelineScene.GetTweetsTimeline.DisplayUser(id: user.id, name: user.name, screenName: user.screenName, profileImageURL: user.profileImageURL)
             let displayTweet = TweetsTimelineScene.GetTweetsTimeline.DisplayTweet(id: tweet.id, creationDate: tweet.creationDate, text: tweet.text, user: displayUser, favourite: tweet.favourite)
+            displayTweets.append(displayTweet)
         }
         let viewModel = TweetsTimelineScene.GetTweetsTimeline.ViewModel(displayTweets: displayTweets)
         self.output?.displayTweetsTimeline(viewModel: viewModel)

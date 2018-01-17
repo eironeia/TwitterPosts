@@ -7,7 +7,25 @@
 		<key>TwitterPosts.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>0</integer>
+			<integer>6</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>9CE4E2D0200F04E50059916D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>9CE4E2E7200F04E50059916D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>9CE4E2F2200F04E50059916D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>

@@ -42,6 +42,11 @@ class TweetsTimelineViewController: UIViewController, TweetsTimelineViewControll
     
     // MARK: View lifecycle
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.tabBarController?.navigationItem.hidesBackButton = true
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.configureTableViewOnLoad()

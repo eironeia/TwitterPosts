@@ -40,8 +40,7 @@ class TimelineTweetCell: UITableViewCell {
         
         self.nameLabel.text = tweet.user.name
         self.screenNameLabel.text = tweet.user.screenName
-        
-        //TODO: MAKE THE FAVOURITE ACTIONS
+    
         self.favouriteButton.layer.cornerRadius = self.favouriteButton.layer.frame.height/2
         
         self.tweetTextLabel.text = tweet.text
@@ -58,13 +57,5 @@ class TimelineTweetCell: UITableViewCell {
         }
     }
     
-    @IBAction func favouriteButtonPressed(_ sender: Any) {
-        if self.favourite {
-            self.favouriteButton.imageView?.tintColor = UIColor.gray
-        }
-        else {
-            self.favouriteButton.imageView?.tintColor = UIColor.red
-        }
-        self.favourite = !self.favourite
-    }
+
 }

@@ -39,4 +39,12 @@ extension TweetsTimelineViewController: UITableViewDelegate, UITableViewDataSour
         
         return UITableViewCell()
     }
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        
+        if indexPath.row == (self.displayTweetsTimeline.count - 1) {
+            self.getTweetsTimeline()
+        }
+    }
+    
 }

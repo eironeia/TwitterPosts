@@ -43,6 +43,7 @@ class UserProfileViewController: UIViewController, UserProfileViewControllerInpu
         super.viewDidLoad()
         self.configureTableViewOnLoad()
         self.getUserDetails()
+        self.navigationItem.title = "Profile"
     }
     
     // MARK: Requests

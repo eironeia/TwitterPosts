@@ -39,7 +39,7 @@ class TweetsTimelineInteractor: TweetsTimelineInteractorInput, TweetsTimelineDat
     
     func getTweetsTimeline(request: TweetsTimelineScene.GetTweetsTimeline.Request) {
         self.twitterAPIStore.geTweetsTimeline(page: request.page) { (tweets) in
-            self.tweets = tweets
+            self.tweets += tweets
             let response = TweetsTimelineScene.GetTweetsTimeline.Response(tweetsTimeline: tweets)
             self.output?.presentTweets(response: response)
         }

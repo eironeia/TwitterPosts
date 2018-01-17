@@ -37,6 +37,12 @@
 		9CDCD19E200F919B007F9136 /* UserProfileCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CDCD19D200F919B007F9136 /* UserProfileCell.xib */; };
 		9CDCD1A0200F91B0007F9136 /* UserProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CDCD19F200F91B0007F9136 /* UserProfileCell.swift */; };
 		9CDCD1A2200F9730007F9136 /* TableView+UserProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CDCD1A1200F9730007F9136 /* TableView+UserProfileVC.swift */; };
+		9CDCD1A9200FA54B007F9136 /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CDCD1A3200FA54B007F9136 /* LoginPresenter.swift */; };
+		9CDCD1AA200FA54B007F9136 /* LoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CDCD1A4200FA54B007F9136 /* LoginRouter.swift */; };
+		9CDCD1AB200FA54B007F9136 /* LoginModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CDCD1A5200FA54B007F9136 /* LoginModels.swift */; };
+		9CDCD1AC200FA54B007F9136 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CDCD1A6200FA54B007F9136 /* LoginViewController.swift */; };
+		9CDCD1AD200FA54B007F9136 /* LoginInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CDCD1A7200FA54B007F9136 /* LoginInteractor.swift */; };
+		9CDCD1AE200FA54B007F9136 /* LoginConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CDCD1A8200FA54B007F9136 /* LoginConfigurator.swift */; };
 		9CE4E2D5200F04E50059916D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE4E2D4200F04E50059916D /* AppDelegate.swift */; };
 		9CE4E2D7200F04E50059916D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE4E2D6200F04E50059916D /* ViewController.swift */; };
 		9CE4E2DA200F04E50059916D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CE4E2D8200F04E50059916D /* Main.storyboard */; };
@@ -101,6 +107,12 @@
 		9CDCD19D200F919B007F9136 /* UserProfileCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserProfileCell.xib; sourceTree = "<group>"; };
 		9CDCD19F200F91B0007F9136 /* UserProfileCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileCell.swift; sourceTree = "<group>"; };
 		9CDCD1A1200F9730007F9136 /* TableView+UserProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TableView+UserProfileVC.swift"; sourceTree = "<group>"; };
+		9CDCD1A3200FA54B007F9136 /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
+		9CDCD1A4200FA54B007F9136 /* LoginRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRouter.swift; sourceTree = "<group>"; };
+		9CDCD1A5200FA54B007F9136 /* LoginModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModels.swift; sourceTree = "<group>"; };
+		9CDCD1A6200FA54B007F9136 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		9CDCD1A7200FA54B007F9136 /* LoginInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInteractor.swift; sourceTree = "<group>"; };
+		9CDCD1A8200FA54B007F9136 /* LoginConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginConfigurator.swift; sourceTree = "<group>"; };
 		9CE4E2D1200F04E50059916D /* TwitterPosts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TwitterPosts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CE4E2D4200F04E50059916D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9CE4E2D6200F04E50059916D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -244,6 +256,12 @@
 		9CDCD170200F4D24007F9136 /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				9CDCD1A3200FA54B007F9136 /* LoginPresenter.swift */,
+				9CDCD1A4200FA54B007F9136 /* LoginRouter.swift */,
+				9CDCD1A5200FA54B007F9136 /* LoginModels.swift */,
+				9CDCD1A6200FA54B007F9136 /* LoginViewController.swift */,
+				9CDCD1A7200FA54B007F9136 /* LoginInteractor.swift */,
+				9CDCD1A8200FA54B007F9136 /* LoginConfigurator.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -539,12 +557,16 @@
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+				"${PODS_ROOT}/TwitterCore/iOS/TwitterCore.framework",
+				"${PODS_ROOT}/TwitterKit/iOS/TwitterKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TwitterCore.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TwitterKit.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -620,9 +642,13 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-TwitterPosts/Pods-TwitterPosts-resources.sh",
+				"${PODS_ROOT}/TwitterKit/iOS/TwitterKit.framework/TwitterKitResources.bundle",
+				"${PODS_ROOT}/TwitterKit/iOS/TwitterKit.framework/TwitterShareExtensionUIResources.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -687,6 +713,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9CDCD1AD200FA54B007F9136 /* LoginInteractor.swift in Sources */,
 				9CC793DA200F05E100FA3435 /* TweetsFakeData.swift in Sources */,
 				9CDCD19A200F90A2007F9136 /* UserProfileConfigurator.swift in Sources */,
 				9CDCD198200F90A2007F9136 /* UserProfileViewController.swift in Sources */,
@@ -696,6 +723,7 @@
 				9CDCD17D200F4D55007F9136 /* TweetsTimelineInteractor.swift in Sources */,
 				9CE4E2DD200F04E50059916D /* TwitterPosts.xcdatamodeld in Sources */,
 				9CDCD166200F4C10007F9136 /* TwitterAPIStore.swift in Sources */,
+				9CDCD1AB200FA54B007F9136 /* LoginModels.swift in Sources */,
 				9CDCD187200F63AC007F9136 /* TableView+TweetsTimelineVC.swift in Sources */,
 				9CDCD199200F90A2007F9136 /* UserProfileInteractor.swift in Sources */,
 				9CDCD16D200F4C54007F9136 /* APIKeys.swift in Sources */,
@@ -707,10 +735,14 @@
 				9CDCD168200F4C1E007F9136 /* Tweet.swift in Sources */,
 				9CDCD18B200F7170007F9136 /* UserMapper.swift in Sources */,
 				9CDCD16F200F4C96007F9136 /* URLs.swift in Sources */,
+				9CDCD1AC200FA54B007F9136 /* LoginViewController.swift in Sources */,
 				9CDCD16A200F4C2D007F9136 /* User.swift in Sources */,
 				9CDCD184200F4DDE007F9136 /* TimelineTweetCell.swift in Sources */,
 				9CE4E2D7200F04E50059916D /* ViewController.swift in Sources */,
 				9CDCD1A2200F9730007F9136 /* TableView+UserProfileVC.swift in Sources */,
+				9CDCD1AA200FA54B007F9136 /* LoginRouter.swift in Sources */,
+				9CDCD1AE200FA54B007F9136 /* LoginConfigurator.swift in Sources */,
+				9CDCD1A9200FA54B007F9136 /* LoginPresenter.swift in Sources */,
 				9CDCD189200F709A007F9136 /* TweetMapper.swift in Sources */,
 				9CE4E2D5200F04E50059916D /* AppDelegate.swift in Sources */,
 				9CDCD17B200F4D55007F9136 /* TweetsTimelineModels.swift in Sources */,

@@ -13,11 +13,11 @@ import SwiftyJSON
 
 class TwitterAPIStore {
     
+    var tweets:[Tweet] = []
     // TODO: Make it with not fake data
     func geTweetsTimeline(page: Int, completion: ([Tweet]) -> Void) {
         
         //Check if the Tweet is favourite on the coredata
-        var tweets:[Tweet] = []
         for tweetDict in FakeData.tweetsTimeline {
             let tweetsJSON = JSON(tweetDict)
             if let tweet = Tweet.object(fromJSON: tweetsJSON) as? Tweet {

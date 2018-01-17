@@ -45,4 +45,19 @@ struct TweetsTimelineScene {
             var profileImageURL: String
         }
     }
+    
+    struct SetSelectedUser {
+        
+        struct Request {
+            let index: Int
+        }
+        
+        struct Response {
+            
+        }
+        
+        struct ViewModel {
+            
+        }
+    }
 }

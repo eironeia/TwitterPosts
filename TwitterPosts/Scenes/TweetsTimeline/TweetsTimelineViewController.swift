@@ -16,6 +16,7 @@ protocol TweetsTimelineViewControllerInput {
 
 protocol TweetsTimelineViewControllerOutput {
     func getTweetsTimeline(request: TweetsTimelineScene.GetTweetsTimeline.Request)
+    func setSelectedUser(request: TweetsTimelineScene.SetSelectedUser.Request)
 }
 
 class TweetsTimelineViewController: UIViewController, TweetsTimelineViewControllerInput {
@@ -31,8 +32,6 @@ class TweetsTimelineViewController: UIViewController, TweetsTimelineViewControll
     
     var page:Int = 0
     var displayTweetsTimeline:[TweetsTimelineScene.GetTweetsTimeline.DisplayTweet] = []
-    
-    
     
     // MARK: Object lifecycle
     
@@ -54,6 +53,12 @@ class TweetsTimelineViewController: UIViewController, TweetsTimelineViewControll
         page += 1
         let request = TweetsTimelineScene.GetTweetsTimeline.Request(page: page)
         self.output?.getTweetsTimeline(request: request)
+    }
+    
+    func showUserProfile(index: Int) {
+        let request = TweetsTimelineScene.SetSelectedUser.Request(index: index)
+        self.output?.setSelectedUser(request: request)
+        self.router?.navigateToUserProfileScene()
     }
     
     // MARK: Display logic

@@ -24,6 +24,7 @@ extension TweetsTimelineViewController: UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.showUserProfile(index: indexPath.row)
         tableView.deselectRow(at: indexPath, animated: false)
     }
     

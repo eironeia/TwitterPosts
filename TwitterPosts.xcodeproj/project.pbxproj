@@ -27,6 +27,16 @@
 		9CDCD187200F63AC007F9136 /* TableView+TweetsTimelineVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CDCD186200F63AC007F9136 /* TableView+TweetsTimelineVC.swift */; };
 		9CDCD189200F709A007F9136 /* TweetMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CDCD188200F709A007F9136 /* TweetMapper.swift */; };
 		9CDCD18B200F7170007F9136 /* UserMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CDCD18A200F7170007F9136 /* UserMapper.swift */; };
+		9CDCD18D200F89DD007F9136 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CDCD18C200F89DD007F9136 /* Persistence.swift */; };
+		9CDCD195200F90A2007F9136 /* UserProfilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CDCD18F200F90A2007F9136 /* UserProfilePresenter.swift */; };
+		9CDCD196200F90A2007F9136 /* UserProfileRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CDCD190200F90A2007F9136 /* UserProfileRouter.swift */; };
+		9CDCD197200F90A2007F9136 /* UserProfileModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CDCD191200F90A2007F9136 /* UserProfileModels.swift */; };
+		9CDCD198200F90A2007F9136 /* UserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CDCD192200F90A2007F9136 /* UserProfileViewController.swift */; };
+		9CDCD199200F90A2007F9136 /* UserProfileInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CDCD193200F90A2007F9136 /* UserProfileInteractor.swift */; };
+		9CDCD19A200F90A2007F9136 /* UserProfileConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CDCD194200F90A2007F9136 /* UserProfileConfigurator.swift */; };
+		9CDCD19E200F919B007F9136 /* UserProfileCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CDCD19D200F919B007F9136 /* UserProfileCell.xib */; };
+		9CDCD1A0200F91B0007F9136 /* UserProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CDCD19F200F91B0007F9136 /* UserProfileCell.swift */; };
+		9CDCD1A2200F9730007F9136 /* TableView+UserProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CDCD1A1200F9730007F9136 /* TableView+UserProfileVC.swift */; };
 		9CE4E2D5200F04E50059916D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE4E2D4200F04E50059916D /* AppDelegate.swift */; };
 		9CE4E2D7200F04E50059916D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE4E2D6200F04E50059916D /* ViewController.swift */; };
 		9CE4E2DA200F04E50059916D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CE4E2D8200F04E50059916D /* Main.storyboard */; };
@@ -81,6 +91,16 @@
 		9CDCD186200F63AC007F9136 /* TableView+TweetsTimelineVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TableView+TweetsTimelineVC.swift"; sourceTree = "<group>"; };
 		9CDCD188200F709A007F9136 /* TweetMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetMapper.swift; sourceTree = "<group>"; };
 		9CDCD18A200F7170007F9136 /* UserMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserMapper.swift; sourceTree = "<group>"; };
+		9CDCD18C200F89DD007F9136 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		9CDCD18F200F90A2007F9136 /* UserProfilePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfilePresenter.swift; sourceTree = "<group>"; };
+		9CDCD190200F90A2007F9136 /* UserProfileRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileRouter.swift; sourceTree = "<group>"; };
+		9CDCD191200F90A2007F9136 /* UserProfileModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileModels.swift; sourceTree = "<group>"; };
+		9CDCD192200F90A2007F9136 /* UserProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileViewController.swift; sourceTree = "<group>"; };
+		9CDCD193200F90A2007F9136 /* UserProfileInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileInteractor.swift; sourceTree = "<group>"; };
+		9CDCD194200F90A2007F9136 /* UserProfileConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileConfigurator.swift; sourceTree = "<group>"; };
+		9CDCD19D200F919B007F9136 /* UserProfileCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserProfileCell.xib; sourceTree = "<group>"; };
+		9CDCD19F200F91B0007F9136 /* UserProfileCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileCell.swift; sourceTree = "<group>"; };
+		9CDCD1A1200F9730007F9136 /* TableView+UserProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TableView+UserProfileVC.swift"; sourceTree = "<group>"; };
 		9CE4E2D1200F04E50059916D /* TwitterPosts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TwitterPosts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CE4E2D4200F04E50059916D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9CE4E2D6200F04E50059916D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -151,6 +171,7 @@
 		9CDCD15A200F4B3C007F9136 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				9CDCD18E200F9089007F9136 /* UserProfile */,
 				9CDCD172200F4D31007F9136 /* FavouriteTweets */,
 				9CDCD171200F4D2A007F9136 /* TweetsTimeline */,
 				9CDCD170200F4D24007F9136 /* Login */,
@@ -198,6 +219,7 @@
 			isa = PBXGroup;
 			children = (
 				9CDCD164200F4BFD007F9136 /* API */,
+				9CDCD18C200F89DD007F9136 /* Persistence.swift */,
 			);
 			path = Stores;
 			sourceTree = "<group>";
@@ -261,6 +283,38 @@
 			isa = PBXGroup;
 			children = (
 				9CDCD186200F63AC007F9136 /* TableView+TweetsTimelineVC.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		9CDCD18E200F9089007F9136 /* UserProfile */ = {
+			isa = PBXGroup;
+			children = (
+				9CDCD19B200F917A007F9136 /* UI */,
+				9CDCD19C200F9182007F9136 /* Extensions */,
+				9CDCD18F200F90A2007F9136 /* UserProfilePresenter.swift */,
+				9CDCD190200F90A2007F9136 /* UserProfileRouter.swift */,
+				9CDCD191200F90A2007F9136 /* UserProfileModels.swift */,
+				9CDCD192200F90A2007F9136 /* UserProfileViewController.swift */,
+				9CDCD193200F90A2007F9136 /* UserProfileInteractor.swift */,
+				9CDCD194200F90A2007F9136 /* UserProfileConfigurator.swift */,
+			);
+			path = UserProfile;
+			sourceTree = "<group>";
+		};
+		9CDCD19B200F917A007F9136 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				9CDCD19D200F919B007F9136 /* UserProfileCell.xib */,
+				9CDCD19F200F91B0007F9136 /* UserProfileCell.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		9CDCD19C200F9182007F9136 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				9CDCD1A1200F9730007F9136 /* TableView+UserProfileVC.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -454,6 +508,7 @@
 				9CE4E2DF200F04E50059916D /* Assets.xcassets in Resources */,
 				9CDCD182200F4DBC007F9136 /* TimelineTweet.xib in Resources */,
 				9CE4E2DA200F04E50059916D /* Main.storyboard in Resources */,
+				9CDCD19E200F919B007F9136 /* UserProfileCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -633,24 +688,33 @@
 			buildActionMask = 2147483647;
 			files = (
 				9CC793DA200F05E100FA3435 /* TweetsFakeData.swift in Sources */,
+				9CDCD19A200F90A2007F9136 /* UserProfileConfigurator.swift in Sources */,
+				9CDCD198200F90A2007F9136 /* UserProfileViewController.swift in Sources */,
 				9CDCD179200F4D55007F9136 /* TweetsTimelinePresenter.swift in Sources */,
 				9CDCD17E200F4D55007F9136 /* TweetsTimelineConfigurator.swift in Sources */,
+				9CDCD18D200F89DD007F9136 /* Persistence.swift in Sources */,
 				9CDCD17D200F4D55007F9136 /* TweetsTimelineInteractor.swift in Sources */,
 				9CE4E2DD200F04E50059916D /* TwitterPosts.xcdatamodeld in Sources */,
 				9CDCD166200F4C10007F9136 /* TwitterAPIStore.swift in Sources */,
 				9CDCD187200F63AC007F9136 /* TableView+TweetsTimelineVC.swift in Sources */,
+				9CDCD199200F90A2007F9136 /* UserProfileInteractor.swift in Sources */,
 				9CDCD16D200F4C54007F9136 /* APIKeys.swift in Sources */,
 				9CDCD17C200F4D55007F9136 /* TweetsTimelineViewController.swift in Sources */,
 				9CDCD17A200F4D55007F9136 /* TweetsTimelineRouter.swift in Sources */,
+				9CDCD195200F90A2007F9136 /* UserProfilePresenter.swift in Sources */,
+				9CDCD196200F90A2007F9136 /* UserProfileRouter.swift in Sources */,
+				9CDCD1A0200F91B0007F9136 /* UserProfileCell.swift in Sources */,
 				9CDCD168200F4C1E007F9136 /* Tweet.swift in Sources */,
 				9CDCD18B200F7170007F9136 /* UserMapper.swift in Sources */,
 				9CDCD16F200F4C96007F9136 /* URLs.swift in Sources */,
 				9CDCD16A200F4C2D007F9136 /* User.swift in Sources */,
 				9CDCD184200F4DDE007F9136 /* TimelineTweetCell.swift in Sources */,
 				9CE4E2D7200F04E50059916D /* ViewController.swift in Sources */,
+				9CDCD1A2200F9730007F9136 /* TableView+UserProfileVC.swift in Sources */,
 				9CDCD189200F709A007F9136 /* TweetMapper.swift in Sources */,
 				9CE4E2D5200F04E50059916D /* AppDelegate.swift in Sources */,
 				9CDCD17B200F4D55007F9136 /* TweetsTimelineModels.swift in Sources */,
+				9CDCD197200F90A2007F9136 /* UserProfileModels.swift in Sources */,
 				9CDCD162200F4BE7007F9136 /* ResponseSerializable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

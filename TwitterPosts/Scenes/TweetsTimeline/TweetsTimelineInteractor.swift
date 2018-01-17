@@ -10,6 +10,7 @@
 
 protocol TweetsTimelineInteractorInput {
     func getTweetsTimeline(request: TweetsTimelineScene.GetTweetsTimeline.Request)
+    func setSelectedUser(request: TweetsTimelineScene.SetSelectedUser.Request)
 }
 
 protocol TweetsTimelineInteractorOutput {
@@ -17,7 +18,7 @@ protocol TweetsTimelineInteractorOutput {
 }
 
 protocol TweetsTimelineDataSource {
-    
+    var selectedUser: User! {get set}
 }
 
 protocol TweetsTimelineDataDestination {
@@ -30,13 +31,23 @@ class TweetsTimelineInteractor: TweetsTimelineInteractorInput, TweetsTimelineDat
     
     let twitterAPIStore = TwitterAPIStore()
     
+    var tweets:[Tweet] = []
+    
+    var selectedUser: User!
+    
     // MARK: Business logic
     
     func getTweetsTimeline(request: TweetsTimelineScene.GetTweetsTimeline.Request) {
         self.twitterAPIStore.geTweetsTimeline(page: request.page) { (tweets) in
+            self.tweets = tweets
             let response = TweetsTimelineScene.GetTweetsTimeline.Response(tweetsTimeline: tweets)
             self.output?.presentTweets(response: response)
         }
+    }
+    
+    func setSelectedUser(request: TweetsTimelineScene.SetSelectedUser.Request) {
+        let tweet = self.tweets[request.index]
+        self.selectedUser = tweet.user
     }
 
 }

@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item-->
+        <!--Tweets Timeline View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="TweetsTimelineViewController" customModule="TwitterPosts" customModuleProvider="target" sceneMemberID="viewController">
@@ -37,14 +37,50 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="s4Z-f8-6fk"/>
+                    <tabBarItem key="tabBarItem" systemItem="history" id="s4Z-f8-6fk"/>
                     <connections>
                         <outlet property="tweetsTimelineTableView" destination="zJj-eu-NFS" id="awQ-WK-3Ud"/>
+                        <segue destination="kkP-4a-cZ9" kind="show" identifier="userProfile" id="LLv-ld-QOV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="708" y="-248.72563718140933"/>
+        </scene>
+        <!--User Profile View Controller-->
+        <scene sceneID="Gge-Md-UUu">
+            <objects>
+                <viewController storyboardIdentifier="userProfileViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="kkP-4a-cZ9" customClass="UserProfileViewController" customModule="TwitterPosts" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6n6-Ly-D7A">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Sam-On-AUh">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" red="0.43872018689999998" green="0.7116105949" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="kkP-4a-cZ9" id="yxb-lU-F5Z"/>
+                                    <outlet property="delegate" destination="kkP-4a-cZ9" id="2sA-3d-SHH"/>
+                                    <outlet property="prefetchDataSource" destination="kkP-4a-cZ9" id="ZSD-Bw-1HY"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Sam-On-AUh" firstAttribute="bottom" secondItem="bs7-As-k4R" secondAttribute="bottom" id="0dt-e9-kfH"/>
+                            <constraint firstItem="Sam-On-AUh" firstAttribute="top" secondItem="bs7-As-k4R" secondAttribute="top" id="MDm-0M-ToH"/>
+                            <constraint firstItem="Sam-On-AUh" firstAttribute="leading" secondItem="bs7-As-k4R" secondAttribute="leading" id="WNV-KM-s0t"/>
+                            <constraint firstItem="Sam-On-AUh" firstAttribute="trailing" secondItem="bs7-As-k4R" secondAttribute="trailing" id="vZg-NG-kdN"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="bs7-As-k4R"/>
+                    </view>
+                    <connections>
+                        <outlet property="userProfileTableView" destination="Sam-On-AUh" id="Syc-mx-lVg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ypJ-1z-XWh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1472.8" y="-249.62518740629687"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="eRZ-or-rvn">
@@ -74,6 +110,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" red="0.43872018690309511" green="0.7116105949428857" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="eei-P2-C4P"/>
@@ -84,7 +121,7 @@
             </objects>
             <point key="canvasLocation" x="-148" y="116.49175412293854"/>
         </scene>
-        <!--Item-->
+        <!--View Controller-->
         <scene sceneID="Q4k-q5-vlO">
             <objects>
                 <viewController id="HFW-CT-5ca" sceneMemberID="viewController">
@@ -94,7 +131,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="gJk-He-1P6"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="1tU-mj-cvG"/>
+                    <tabBarItem key="tabBarItem" systemItem="favorites" id="1tU-mj-cvG"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dK1-qC-0oe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

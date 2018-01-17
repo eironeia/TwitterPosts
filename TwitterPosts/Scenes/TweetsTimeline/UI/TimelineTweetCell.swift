@@ -19,6 +19,8 @@ class TimelineTweetCell: UITableViewCell {
     @IBOutlet weak var tweetTextLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
     
+    var favourite:Bool = false
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -32,7 +34,6 @@ class TimelineTweetCell: UITableViewCell {
     func set(tweet: TweetsTimelineScene.GetTweetsTimeline.DisplayTweet) {
         
         let pictureURL = URL(string: tweet.user.profileImageURL)
-        print(pictureURL)
         self.profileImageView.kf.setImage(with: pictureURL)
         self.profileImageView.layer.cornerRadius = self.profileImageView.frame.height/2
         self.profileImageView.clipsToBounds = true
@@ -44,6 +45,26 @@ class TimelineTweetCell: UITableViewCell {
         self.favouriteButton.layer.cornerRadius = self.favouriteButton.layer.frame.height/2
         
         self.tweetTextLabel.text = tweet.text
+        self.tweetTextLabel.numberOfLines = 0
+        self.tweetTextLabel.sizeToFit()
+        
         self.dateLabel.text = tweet.creationDate
+        
+        if self.favourite {
+            self.favouriteButton.imageView?.tintColor = UIColor.red
+        }
+        else {
+            self.favouriteButton.imageView?.tintColor = UIColor.gray
+        }
+    }
+    
+    @IBAction func favouriteButtonPressed(_ sender: Any) {
+        if self.favourite {
+            self.favouriteButton.imageView?.tintColor = UIColor.gray
+        }
+        else {
+            self.favouriteButton.imageView?.tintColor = UIColor.red
+        }
+        self.favourite = !self.favourite
     }
 }

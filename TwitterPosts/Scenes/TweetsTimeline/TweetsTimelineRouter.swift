@@ -15,7 +15,7 @@ protocol TweetsTimelineRouterInput {
 }
 
 protocol TweetsTimelineRouterDataSource: class {
-    
+    var selectedUser: User! {get set}
 }
 
 protocol TweetsTimelineRouterDataDestination: class {
@@ -28,6 +28,10 @@ class TweetsTimelineRouter: TweetsTimelineRouterInput {
     weak private var dataSource: TweetsTimelineRouterDataSource!
     weak var dataDestination: TweetsTimelineRouterDataDestination!
     
+    struct SegueIdentifiers {
+        static let userProfile = "userProfile"
+    }
+    
     init(viewController: TweetsTimelineViewController, dataSource: TweetsTimelineRouterDataSource, dataDestination: TweetsTimelineRouterDataDestination) {
         self.viewController = viewController
         self.dataSource = dataSource
@@ -36,10 +40,34 @@ class TweetsTimelineRouter: TweetsTimelineRouterInput {
     
     // MARK: Navigation
     
-    // MARK: Communication
+    func navigateToUserProfileScene()
+    {
+        viewController.performSegue(withIdentifier: SegueIdentifiers.userProfile, sender: viewController)
+    }
     
     func passDataToNextScene(for segue: UIStoryboardSegue) {
         // NOTE: Teach the router which scenes it can communicate with
         
+        guard let segueIdentifier = segue.identifier else {
+            return
+        }
+        
+        switch segueIdentifier {
+        case SegueIdentifiers.userProfile:
+            passDataToUserProfileScene(for: segue)
+        default:
+            return
+        }
+    }
+    
+    // MARK: Communication
+    
+    func passDataToUserProfileScene(for segue: UIStoryboardSegue)
+    {
+        // NOTE: Teach the router how to pass data to the next scene
+        
+        if let userProfileViewController = segue.destination as? UserProfileViewController {
+            userProfileViewController.router?.dataDestination.user = dataSource.selectedUser
+        }
     }
 }
